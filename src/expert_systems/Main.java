@@ -5,7 +5,7 @@ import org.apache.jena.ontology.OntModel;
 
 public class Main {
 	
-	private static String s_FileName = "C:\\Users\\tanne\\Desktop\\expert_systems\\expert_systems\\simpsons.owl";
+	private static String s_FileName = "traffic.owl";
 	
 	public static void main(String [] args)
 	{
@@ -15,6 +15,7 @@ public class Main {
 		
 		if(model == null)
 		{
+			System.out.println("test 1234");
 			return;
 		}
 		
