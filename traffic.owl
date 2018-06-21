@@ -6,8 +6,9 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:untitled-ontology-4="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4"/>
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#"
+     xmlns:traffic="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic"/>
     
 
 
@@ -22,66 +23,66 @@
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#hasSign -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSign -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#hasSign"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSign"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#hasSpeedlimit -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSpeedlimit -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#hasSpeedlimit"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSpeedlimit"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#hasTrafficLight -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#hasTrafficLight"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#isLegal -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isLegal -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#isLegal"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isLegal"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#straightForeward -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#straightForeward -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#straightForeward">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnLeft"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnRight"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#straightForeward">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnLeft"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnRight"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnLeft -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnLeft -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnLeft">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnRight"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnLeft">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnRight"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnRight -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnRight -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#turnRight">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#turnRight">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#willBeOvertaken -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#willBeOvertaken -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#willBeOvertaken">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#willOvertake"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#willBeOvertaken">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#willOvertake"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#willOvertake -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#willOvertake -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#willOvertake"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#willOvertake"/>
     
 
 
@@ -96,50 +97,50 @@
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Cars -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Cars -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Cars"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Cars"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#CrossSigns -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#CrossSigns -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#CrossSigns">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Signs"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#CrossSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Signs"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Crossing -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Crossing"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Lane -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Lane"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#LaneSigns -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LaneSigns -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#LaneSigns">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Signs"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LaneSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Signs"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Signs -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Signs -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Signs"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Signs"/>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Speedlimit -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Speedlimit -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Speedlimit">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#LaneSigns"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Speedlimit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LaneSigns"/>
     </owl:Class>
     
 
@@ -155,68 +156,68 @@
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#MyCrossing -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#MyCrossing -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#MyCrossing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Crossing"/>
-        <hasSign rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Stop"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#MyCrossing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
+        <traffic:hasSign rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Stop"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#MyStreet -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#MyStreet -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#MyStreet">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Lane"/>
-        <hasSpeedlimit rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#100"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#MyStreet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
+        <traffic:hasSpeedlimit rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#100"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Stop -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Stop -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Stop">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#CrossSigns"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Stop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#CrossSigns"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#myCar -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#myCar -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#myCar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Cars"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#myCar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Cars"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#otherCar -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#otherCar -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#otherCar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Cars"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#otherCar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Cars"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#100 -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#100 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#100">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Speedlimit"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Speedlimit"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#30 -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#30 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#30">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Speedlimit"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Speedlimit"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#50 -->
+    <!-- http://www.semanticweb.org/koger/ontologies/2018/5/traffic#50 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#50">
-        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#Speedlimit"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Speedlimit"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
