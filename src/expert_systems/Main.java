@@ -1,11 +1,12 @@
 package expert_systems;
 
-import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.ObjectProperty;
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.rdf.model.ResIterator;
-import org.apache.jena.rdf.model.Resource;
+import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.rdf.model.ResIterator;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.ontology.ObjectProperty;
+import com.hp.hpl.jena.ontology.Individual;
 
 public class Main {
 	
@@ -31,6 +32,10 @@ public class Main {
 		
 		ObjectProperty hasSign = OwlManager.GetObjectProperty(model, "hasSign");
 		
+		Individual myStreet = OwlManager.CreateIndividual(model, laneClass, "MyStreet");
+		
+		ObjectProperty isLegal = OwlManager.GetObjectProperty(model, "isLegal");
+		Statement staement = myStreet.getProperty(isLegal);
 		lane.addProperty(hasSign, sign);
 		
 		if(lane.hasProperty(hasSign))
@@ -38,7 +43,7 @@ public class Main {
 			System.out.println("it worked");
 		}
 		
-		ResIterator iter = model.listSubjectsWithProperty(hasSign);
+		ResIterator iter = model.listSubjectsWithProperty(isLegal);
 		while (iter.hasNext()) {
 		    Resource r = iter.nextResource();
 		    System.out.println(r.getLocalName());

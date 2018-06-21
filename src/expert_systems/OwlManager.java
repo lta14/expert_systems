@@ -1,22 +1,25 @@
 package expert_systems;
 
-import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.ObjectProperty;
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecution;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
-import org.apache.jena.query.ResultSet;
-import org.apache.jena.query.ResultSetFormatter;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.util.FileManager;
+
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
+import org.mindswap.pellet.jena.PelletReasonerFactory;
+
+import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.ResultSetFormatter;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.ontology.ObjectProperty;
+import com.hp.hpl.jena.ontology.Individual;
+import com.hp.hpl.jena.util.FileManager;
 
 public class OwlManager {
 	
@@ -27,6 +30,9 @@ public class OwlManager {
 	static OntModel OpenOWL(String fileName) 
 	{
 		OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_RULE_INF);
+		com.hp.hpl.jena.ontology.OntModelSpec spec= PelletReasonerFactory.THE_SPEC;
+		
+		OntModel owlModel2 = ModelFactory.createOntologyModel(spec, owlModel);
 
 		InputStream in = FileManager.get().open(fileName);
 
@@ -35,7 +41,7 @@ public class OwlManager {
 			throw new IllegalArgumentException("cannot open ontology");
 		}
 
-		OntModel model = (OntModel) owlModel.read(in, "");
+		OntModel model = (OntModel) owlModel2.read(in, "");
 
 		return model;
 	}
