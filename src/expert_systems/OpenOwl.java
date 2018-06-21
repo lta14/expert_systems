@@ -11,6 +11,7 @@ import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.util.FileManager;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
@@ -18,14 +19,14 @@ public class OpenOwl {
 	
 	static String s;
 
-	static OntModel OpenConnectOWL() {
+	static OntModel OpenOWL(String fileName) {
 
 		OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_RULE_INF);
 
-		java.io.InputStream in = FileManager.get()
-				.open("C:\\Users\\tanne\\Desktop\\expert_systems\\expert_systems\\simpsons.owl");
+		InputStream in = FileManager.get().open(fileName);
 
-		if (in == null) {
+		if (in == null) 
+		{
 			throw new IllegalArgumentException("cannot open ontology");
 		}
 
@@ -34,22 +35,22 @@ public class OpenOwl {
 		return model;
 	}
 	
-    static ResultSet ExecSparQl(String Query)
+    static ResultSet ExecSparQl(String Query, String fileName)
     {
         Query query = QueryFactory.create(Query);
 
-        QueryExecution qe = QueryExecutionFactory.create(query, OpenConnectOWL());
+        QueryExecution qe = QueryExecutionFactory.create(query, OpenOWL(fileName));
         ResultSet results = qe.execSelect();
 
         return results;
     }
 	
-    static String ExecSparQlString(String Query){
+    static String ExecSparQlString(String Query, String fileName){
 		try 
 		{
 			Query query = QueryFactory.create(Query);
 
-			QueryExecution qe = QueryExecutionFactory.create(query, OpenConnectOWL());
+			QueryExecution qe = QueryExecutionFactory.create(query, OpenOWL(fileName));
 
 			ResultSet results = qe.execSelect();
 
