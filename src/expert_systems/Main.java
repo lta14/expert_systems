@@ -11,6 +11,13 @@ public class Main {
 	{
 		org.apache.log4j.BasicConfigurator.configure();
 		
+		OntModel model = LoadModel();
+		
+		if(model == null)
+		{
+			return;
+		}
+		
 
 	
 		
@@ -39,7 +46,6 @@ public class Main {
 		{
 			System.out.println(e.getMessage());
 		}
-		
 		return model;
 	}
 }
