@@ -29,5 +29,9 @@
 	<classpathentry kind="lib" path="pellet/lib/pellet-pellint.jar"/>
 	<classpathentry kind="lib" path="pellet/lib/pellet-query.jar"/>
 	<classpathentry kind="lib" path="pellet/lib/pellet-rules.jar"/>
+	<classpathentry kind="lib" path="lib/json-20180130.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6/commons-io-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6/commons-io-2.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

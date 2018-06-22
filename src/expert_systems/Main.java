@@ -4,9 +4,12 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.ontology.ObjectProperty;
 import com.hp.hpl.jena.ontology.Individual;
+import org.json.*;
+import java.io.File;
+import org.json.JSONObject;
+import org.apache.commons.io.FileUtils;
 
 public class Main {
 	
@@ -24,6 +27,31 @@ public class Main {
 			return;
 		}
 		
+		// read json file
+		
+		JSONObject inputData;
+
+		try
+		{
+			inputData = readJSON();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			return;
+		}
+		
+		
+		String pageName = inputData.getJSONObject("pageInfo").getString("pageName");
+
+		JSONArray arr = inputData.getJSONArray("posts");
+		for (int i = 0; i < arr.length(); i++)
+		{
+		    String post_id = arr.getJSONObject(i).getString("post_id");
+		}
+		
+		
+		
 		OntClass laneClass = OwlManager.GetClass(model, "Lane");
 		Individual lane = OwlManager.CreateIndividual(model, laneClass, "lane2");
 		
@@ -35,7 +63,6 @@ public class Main {
 		Individual myStreet = OwlManager.CreateIndividual(model, laneClass, "MyStreet");
 		
 		ObjectProperty isLegal = OwlManager.GetObjectProperty(model, "isLegal");
-		Statement staement = myStreet.getProperty(isLegal);
 		lane.addProperty(hasSign, sign);
 		
 		if(lane.hasProperty(hasSign))
@@ -48,6 +75,17 @@ public class Main {
 		    Resource r = iter.nextResource();
 		    System.out.println(r.getLocalName());
 		}
+	}
+	
+	private static JSONObject readJSON() throws Exception {
+	    File file = new File(".\\inputs\\input.json");
+	    
+	    String content = FileUtils.readFileToString(file, "utf-8");
+	    
+	    // Convert JSON string to JSONObject
+	    JSONObject jsonObject = new JSONObject(content);    
+	    
+	    return jsonObject;
 	}
 	
 	private static OntModel LoadModel()

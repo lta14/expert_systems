@@ -1,0 +1,16 @@
+{
+  "cars": [
+    {
+      "id": "car1",
+      "hasSpeed": "80",
+      "hasAction": "drive",
+      "isOnLane": "MyStreet"
+    },
+    {
+      "id": "car2",
+      "hasSpeed": "100",
+      "hasAction": "stop",
+      "isOnLane": "NextStreet"
+    }
+  ]
+}
