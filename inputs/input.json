@@ -1,16 +1,50 @@
-{
+{ 
+  "lights": [
+    {
+      "id": "light1",
+      "hasColor": "green",
+    },
+    {
+      "id": "light2",
+      "hasColor": "red",
+    }
+  ],
+  "signs": [
+    {
+      "id": "sign1",
+	  "hasType": "stop"
+    },
+    {
+      "id": "sign2",
+	  "hasType": "stop"
+    }
+  ],
   "cars": [
     {
       "id": "car1",
       "hasSpeed": "80",
       "hasAction": "drive",
-      "isOnLane": "MyStreet"
+      "isOnLane": "lane1"
     },
     {
       "id": "car2",
-      "hasSpeed": "100",
+      "hasSpeed": "30",
       "hasAction": "stop",
-      "isOnLane": "NextStreet"
+      "isOnLane": "lane2"
+    }
+  ],  
+  "lanes": [
+    {
+      "id": "lane1",
+      "hasSpeedLimit": "100",
+      "hasTrafficLight": "light1",
+      "hasSign": "sign1"
+    },
+    {
+      "id": "lane2",
+      "hasSpeedLimit": "50",
+      "hasTrafficLight": "light2",
+      "hasSign": "sign2"
     }
   ]
 }

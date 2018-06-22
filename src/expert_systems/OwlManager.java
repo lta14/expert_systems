@@ -18,6 +18,7 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.ontology.ObjectProperty;
+import com.hp.hpl.jena.ontology.DatatypeProperty;
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.util.FileManager;
 
@@ -29,7 +30,7 @@ public class OwlManager {
 
 	static OntModel OpenOWL(String fileName) 
 	{
-		OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_RULE_INF);
+		OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_RULE_INF);
 		com.hp.hpl.jena.ontology.OntModelSpec spec= PelletReasonerFactory.THE_SPEC;
 		
 		OntModel owlModel2 = ModelFactory.createOntologyModel(spec, owlModel);
@@ -70,22 +71,28 @@ public class OwlManager {
 		return property;	
 	}
 	
-    static ResultSet ExecSparQl(String Query, String fileName)
+	static DatatypeProperty GetDataTypeProperty(OntModel model, String name)
+	{
+		DatatypeProperty property = model.getDatatypeProperty(s_SourcePrefix+name);
+		return property;	
+	}
+	
+    static ResultSet ExecSparQl(String Query, OntModel model)
     {
         Query query = QueryFactory.create(Query);
 
-        QueryExecution qe = QueryExecutionFactory.create(query, OpenOWL(fileName));
+        QueryExecution qe = QueryExecutionFactory.create(query, model);
         ResultSet results = qe.execSelect();
 
         return results;
     }
 	
-    static String ExecSparQlString(String Query, String fileName){
+    static String ExecSparQlString(String Query, OntModel model){
 		try 
 		{
 			Query query = QueryFactory.create(Query);
 
-			QueryExecution qe = QueryExecutionFactory.create(query, OpenOWL(fileName));
+			QueryExecution qe = QueryExecutionFactory.create(query, model);
 
 			ResultSet results = qe.execSelect();
 
