@@ -1,0 +1,49 @@
+{ 
+  "lights": [
+    {
+      "id": "light1",
+      "hasColor": "green",
+    }
+  ],
+  "signs": [
+  ],
+  "cars": [
+    {
+      "id": "car1",
+      "hasSpeed": "80",
+      "hasAction": "turnRight",
+      "isOnLane": "lanePrimary",
+	  "isAtCrossing": "crossing1"
+    }
+  ],  
+  "lanes": [
+    {
+      "id": "laneForward",
+	  "hasSpeedLimit": "100",
+      "hasTrafficLight": "light1",
+    },
+    {
+      "id": "laneLeft",
+      "hasSpeedLimit": "100",
+      "hasTrafficLight": "light1",
+    },
+    {
+      "id": "laneRight",
+      "hasSpeedLimit": "100",
+      "hasTrafficLight": "light1",
+    },
+    {
+      "id": "lanePrimary",
+      "hasSpeedLimit": "100",
+      "hasTrafficLight": "light1",
+    }
+  ],
+  "crossings": [
+    {
+      "id": "crossing1",
+	  "hasForwardLane": "laneForward",
+      "hasLeftLane": "laneLeft",
+      "hasRightLane": "laneRight"
+    }
+  ]
+}

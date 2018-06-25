@@ -4,29 +4,18 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
-//import com.hp.hpl.jena.rdf.model.ResIterator;
-//import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.ontology.ObjectProperty;
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 import com.hp.hpl.jena.ontology.DatatypeProperty;
 import com.hp.hpl.jena.ontology.Individual;
 import org.json.*;
-
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.json.JSONObject;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
-import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.apache.commons.io.FileUtils;
 
 public class Main {
@@ -82,7 +71,6 @@ public class Main {
 		Iterator<?> iterator = legalClass.listInstances();
 		
 		while( iterator.hasNext() ) {
-
 		    isLegal = true;
 		    break;
 		}
@@ -118,24 +106,6 @@ public class Main {
 		
 		String newQuery = rdf + rdfs + owl + "SELECT ?individual WHERE { ?individual rdf:type owl:LegalSingleSituation }";
 		OwlManager.ExecSparQlString(newQuery, model);
-		*/
-
-		
-		/*
-		ObjectProperty isLegal = OwlManager.GetObjectProperty(model, "isLegal");
-		lane.addProperty(hasSign, sign);
-		
-		if(lane.hasProperty(hasSign))
-		{
-			System.out.println("it worked");
-		}
-		
-		
-		ResIterator iter = model.listSubjectsWithProperty(isLegal);
-		while (iter.hasNext()) {
-		    Resource r = iter.nextResource();
-		    System.out.println(r.getLocalName());
-		}
 		*/
 	}
 	

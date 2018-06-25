@@ -1,0 +1,22 @@
+{ 
+  "lights": [
+  ],
+  "signs": [
+  ],
+  "cars": [
+    {
+      "id": "car1",
+      "hasSpeed": "80",
+      "hasAction": "driveForward",
+      "isOnLane": "lane1"
+    }
+  ],  
+  "lanes": [
+    {
+      "id": "lane1",
+      "hasSpeedLimit": "100",
+    }
+  ],
+  "crossings": [
+  ]
+}

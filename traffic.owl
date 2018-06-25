@@ -333,31 +333,31 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc">
+    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl">
+    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#nl">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cs">
@@ -372,141 +372,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - left - left - green</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasCar"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
-                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc"/>
-                                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                <rdf:first>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
-                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:first>
-                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalCrossingSituation-right</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalCrossingSituation</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -568,7 +434,7 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
                                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnRight</swrl:argument2>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driveForward</swrl:argument2>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -577,7 +443,7 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
                                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
                                                                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#nl"/>
                                                                     </rdf:Description>
@@ -614,7 +480,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - right - rightcar stop</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - left - empty - green</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -641,9 +507,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -652,9 +519,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -665,7 +532,7 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnRight</swrl:argument2>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -674,9 +541,131 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSign"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoCar"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_LegalPriority - forward - green</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driveForward</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -685,9 +674,9 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSignType"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s"/>
-                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop</swrl:argument2>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1015,6 +1004,114 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalCrossingSituation-left</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isOnLane"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasLeftLane"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#nl"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalCrossingSituation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalSignSituationStop</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -1269,127 +1366,6 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalSpeedSituation"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - left - empty - green</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoCar"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
-                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
                     </rdf:Description>
                 </rdf:first>
@@ -1835,7 +1811,7 @@
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
                                                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnRight</swrl:argument2>
+                                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
                                                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1843,116 +1819,6 @@
                                                                         </rdf:rest>
                                                                     </rdf:Description>
                                                                 </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority rightrule - forward</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cs"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cs"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoCar"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#no"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoSign"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoTrafficLight"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driveForward</swrl:argument2>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                             </rdf:Description>
                                                         </rdf:rest>
                                                     </rdf:Description>
@@ -2094,6 +1960,103 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority rightrule - forward</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cs"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cs"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoCar"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#no"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasNoSign"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driveForward</swrl:argument2>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalTrafficLightSituation2</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -2168,6 +2131,114 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalTrafficLightSituation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_LegalPriority - right - green</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnRight</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
                     </rdf:Description>
                 </rdf:first>
@@ -2520,115 +2591,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - forward - green</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driveForward</swrl:argument2>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalCrossingSituation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalCrossingSituation-right</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2690,7 +2653,7 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
                                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driveForward</swrl:argument2>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnRight</swrl:argument2>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2699,7 +2662,7 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
                                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
                                                                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#nl"/>
                                                                     </rdf:Description>
@@ -2736,115 +2699,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalCrossingSituation-left</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Crossing"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isOnLane"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasLeftLane"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#nl"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalCrossingSituation"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - right - green</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - right - rightcar stop</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2884,7 +2739,7 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasRightLane"/>
                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2904,9 +2759,9 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSign"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#rl"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2915,12 +2770,147 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
-                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasSignType"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#s"/>
+                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop</swrl:argument2>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#LegalPriority"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LegalPriority - left - left - green</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Lane"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#isAtCrossing"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasCar"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#Car"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#c"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasColor"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</swrl:argument2>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasTrafficLight"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#l"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#tl"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasAction"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#oc"/>
+                                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">turnLeft</swrl:argument2>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/traffic#hasForwardLane"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#cr"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/koger/ontologies/2018/5/untitled-ontology-4#fl"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
                                                             </rdf:Description>
                                                         </rdf:rest>
                                                     </rdf:Description>
