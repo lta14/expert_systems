@@ -54,7 +54,8 @@ public class Main {
 		createSigns(inputData, model);
 		createTrafficLights(inputData, model);
 		createLanes(inputData, model);
-		createCars(inputData, model);
+		boolean createdCrossing = createCrossing(inputData, model);
+		createCars(inputData, model, createdCrossing);
 		
 		//check output
 		String legalSituation = "LegalSingleSituation";
@@ -86,6 +87,7 @@ public class Main {
 		}
 		
 		
+		
 		//Print Report:
 		
 		System.out.println("We have legal situations on the following lanes:" );
@@ -106,7 +108,7 @@ public class Main {
 		FileWriter out;
 		try {
 			out = new FileWriter( fileName );
-		    model.write( out);
+		    model.write( out, "RDF/XML");
 		}
 		catch(Exception e)
 		{
@@ -193,6 +195,7 @@ public class Main {
 		    String hasSpeedLimit = getString(object, "hasSpeedLimit");
 		    String hasTrafficLight = getString(object, "hasTrafficLight");
 		    String hasSign = getString(object, "hasSign");
+		    String hasNoCar = getString(object, "hasNoCar");
 					    
 			Individual lane = OwlManager.CreateIndividual(model, laneClass, id);
 			
@@ -248,10 +251,65 @@ public class Main {
 					lane.addProperty(hasNoSignProperty, no);	
 				}
 			}
+			
+			//hasNoCar
+			if(!hasNoCar.isEmpty())
+			{
+				ObjectProperty hasNoCarProperty = OwlManager.GetObjectProperty(model, "hasNoCar");
+				lane.addProperty(hasNoCarProperty, no);
+			}
 		}
 	}
 	
-	private static void createCars(JSONObject inputData, OntModel model)
+	private static boolean createCrossing(JSONObject inputData, OntModel model)
+	{
+		boolean created = false;
+		
+		OntClass crossingClass = OwlManager.GetClass(model, "Crossing");
+		
+		JSONArray arr = inputData.getJSONArray("crossings");
+		for (int i = 0; i < arr.length(); i++)
+		{
+			JSONObject object = arr.getJSONObject(i);
+			
+		    String id = getString(object, "id");
+		    String hasLeftLane = getString(object, "hasLeftLane");
+		    String hasRightLane = getString(object, "hasRightLane");
+		    String hasForwardLane = getString(object, "hasForwardLane");
+				    
+			Individual crossing = OwlManager.CreateIndividual(model, crossingClass, id);
+			created = true;
+			
+			// find and add lanes
+			Individual leftLane = OwlManager.GetIndividual(model, hasLeftLane);
+			
+			if(leftLane != null)
+			{
+				ObjectProperty hasLaneProperty = OwlManager.GetObjectProperty(model, "hasLeftLane");
+				crossing.addProperty(hasLaneProperty, leftLane);
+			}
+			
+			Individual rightLane = OwlManager.GetIndividual(model, hasRightLane);
+			
+			if(rightLane != null)
+			{
+				ObjectProperty hasLaneProperty = OwlManager.GetObjectProperty(model, "hasRightLane");
+				crossing.addProperty(hasLaneProperty, rightLane);
+			}
+			
+			Individual forwardLane = OwlManager.GetIndividual(model, hasForwardLane);
+			
+			if(leftLane != null)
+			{
+				ObjectProperty hasLaneProperty = OwlManager.GetObjectProperty(model, "hasForwardLane");
+				crossing.addProperty(hasLaneProperty, forwardLane);
+			}
+		}
+		
+		return created;
+	}
+	
+	private static void createCars(JSONObject inputData, OntModel model, boolean createdCrossing)
 	{
 		OntClass carClass = OwlManager.GetClass(model, "Car");
 		
@@ -264,6 +322,7 @@ public class Main {
 		    String hasSpeed = getString(object, "hasSpeed");
 		    String hasAction = getString(object, "hasAction");
 		    String isOnLane = getString(object, "isOnLane");
+		    String isAtCrossing = getString(object, "isAtCrossing");
 		    
 			Individual car = OwlManager.CreateIndividual(model, carClass, id);
 						
@@ -280,8 +339,33 @@ public class Main {
 			
 			if(lane != null)
 			{
-				ObjectProperty isOnLanePropertry = OwlManager.GetObjectProperty(model, "isOnLane");
-				car.addProperty(isOnLanePropertry, lane);
+				ObjectProperty isOnLaneProperty = OwlManager.GetObjectProperty(model, "isOnLane");
+				car.addProperty(isOnLaneProperty, lane);
+			}
+			
+			
+			//find crossing
+			if(!isAtCrossing.isEmpty())
+			{
+				Individual crossing = OwlManager.GetIndividual(model, isAtCrossing);
+				
+				if(crossing != null)
+				{
+					ObjectProperty isAtCrossingProperty = OwlManager.GetObjectProperty(model, "isAtCrossing");
+					car.addProperty(isAtCrossingProperty, crossing);
+				}
+			}
+			
+			
+			// check if no crossing exists
+			if(!createdCrossing)
+			{
+				Individual no = OwlManager.GetIndividual(model, "No");
+				if(no != null)
+				{
+					ObjectProperty isNotAtCrossingProperty = OwlManager.GetObjectProperty(model, "isNotAtCrossing");
+					lane.addProperty(isNotAtCrossingProperty, no);	
+				}
 			}
 		}
 	}
@@ -314,7 +398,7 @@ public class Main {
 		
 		if(!file.exists())
 		{
-			fileName = s_DefaultInput;
+			file = new File(s_DefaultInput);
 			System.out.println("File: " + fileName + " not found. Using default file: " + s_DefaultInput);
 		}
 		

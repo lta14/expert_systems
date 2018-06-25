@@ -24,26 +24,47 @@
       "id": "car1",
       "hasSpeed": "80",
       "hasAction": "drive",
-      "isOnLane": "lane1"
+      "isOnLane": "lanePrimary",
+	  "isAtCrossing": "crossing1"
     },
     {
       "id": "car2",
       "hasSpeed": "30",
       "hasAction": "stop",
-      "isOnLane": "lane2"
+      "isOnLane": "laneForward"
     }
   ],  
   "lanes": [
     {
-      "id": "lane1",
+      "id": "laneForward",
       "hasTrafficLight": "light1",
       "hasSign": "sign1"
     },
     {
-      "id": "lane2",
+      "id": "laneLeft",
       "hasSpeedLimit": "50",
       "hasTrafficLight": "light2",
       "hasSign": "sign2"
+    },
+    {
+      "id": "laneRight",
+      "hasSpeedLimit": "50",
+      "hasTrafficLight": "light2",
+      "hasSign": "sign2"
+    },
+    {
+      "id": "lanePrimary",
+      "hasSpeedLimit": "50",
+      "hasTrafficLight": "light2",
+      "hasSign": "sign2"
+    }
+  ],
+  "crossings": [
+    {
+      "id": "crossing1",
+	  "hasForwardLane": "laneForward",
+      "hasLeftLane": "laneLeft",
+      "hasRightLane": "laneRight"
     }
   ]
 }
