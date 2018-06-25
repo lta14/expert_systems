@@ -3,8 +3,8 @@ package expert_systems;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
+//import com.hp.hpl.jena.rdf.model.ResIterator;
+//import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.ontology.ObjectProperty;
@@ -14,7 +14,6 @@ import com.hp.hpl.jena.ontology.Individual;
 import org.json.*;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import org.json.JSONObject;
@@ -23,6 +22,8 @@ import org.apache.commons.io.FileUtils;
 public class Main {
 	
 	private static String s_FileName = "traffic.owl";
+	private static String s_StandardInput = ".\\inputs\\";
+	private static String s_DefaultInput = s_StandardInput + "input.json";
 
 	
 	public static void main(String [] args)
@@ -42,7 +43,7 @@ public class Main {
 
 		try
 		{
-			inputData = readJSON();
+			inputData = readJSON(args);
 		}
 		catch(Exception e)
 		{
@@ -112,29 +113,15 @@ public class Main {
 			System.out.println(e.getMessage());
 		}
 		
-		
+		//SPARQL
 		/*
-		 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT ?individual ?class ?label
-WHERE { 
-    ?individual rdf:type owl:NamedIndividual .
-    ?class rdf:type owl:Class .
-    FILTER(?label="bakery")
-}
-		 */
-		
 		String rdf = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 		String rdfs = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 		String owl = "PREFIX owl: <http://www.semanticweb.org/koger/ontologies/2018/5/traffic>";
 		
 		String newQuery = rdf + rdfs + owl + "SELECT ?individual WHERE { ?individual rdf:type owl:LegalSingleSituation }";
-		
-		
 		OwlManager.ExecSparQlString(newQuery, model);
-		
+		*/
 
 		
 		/*
@@ -162,9 +149,11 @@ WHERE {
 		JSONArray arr = inputData.getJSONArray("signs");
 		for (int i = 0; i < arr.length(); i++)
 		{
-		    String id = arr.getJSONObject(i).getString("id");
-		    String hasType = arr.getJSONObject(i).getString("hasType");
-		    
+			JSONObject object = arr.getJSONObject(i);
+			
+		    String id = getString(object, "id");
+		    String hasType = getString(object, "hasType");
+					    
 			Individual sign = OwlManager.CreateIndividual(model, signClass, id);
 			
 			DatatypeProperty hasTypeProperty = OwlManager.GetDataTypeProperty(model, "hasType");
@@ -179,9 +168,11 @@ WHERE {
 		JSONArray arr = inputData.getJSONArray("lights");
 		for (int i = 0; i < arr.length(); i++)
 		{
-		    String id = arr.getJSONObject(i).getString("id");
-		    String hasColor = arr.getJSONObject(i).getString("hasColor");
-		    
+			JSONObject object = arr.getJSONObject(i);
+			
+		    String id = getString(object, "id");
+		    String hasColor = getString(object, "hasColor");
+				    
 			Individual light = OwlManager.CreateIndividual(model, lightClass, id);
 			
 			DatatypeProperty hasColorProperty = OwlManager.GetDataTypeProperty(model, "hasColor");
@@ -196,19 +187,34 @@ WHERE {
 		JSONArray arr = inputData.getJSONArray("lanes");
 		for (int i = 0; i < arr.length(); i++)
 		{
-		    String id = arr.getJSONObject(i).getString("id");
-		    String hasSpeedLimit = arr.getJSONObject(i).getString("hasSpeedLimit");
-		    String hasTrafficLight = arr.getJSONObject(i).getString("hasTrafficLight");
-		    String hasSign = arr.getJSONObject(i).getString("hasSign");
-		    
+			JSONObject object = arr.getJSONObject(i);
+			
+		    String id = getString(object, "id");
+		    String hasSpeedLimit = getString(object, "hasSpeedLimit");
+		    String hasTrafficLight = getString(object, "hasTrafficLight");
+		    String hasSign = getString(object, "hasSign");
+					    
 			Individual lane = OwlManager.CreateIndividual(model, laneClass, id);
 			
-			DatatypeProperty hasSpeedLimitProperty = OwlManager.GetDataTypeProperty(model, "hasSpeedLimit");		
-			Literal speedLimit = model.createTypedLiteral(hasSpeedLimit, XSDDatatype.XSDinteger);
-			Statement speedLimitStatement = model.createStatement(lane, hasSpeedLimitProperty, speedLimit);
-			model.add(speedLimitStatement);
+			Individual no = OwlManager.GetIndividual(model, "No");
 			
-
+			// speedLimit
+			if(hasSpeedLimit.isEmpty())
+			{
+				if(no != null)
+				{
+					ObjectProperty hasNoSpeedLimitProperty = OwlManager.GetObjectProperty(model, "hasNoSpeedLimit");
+					lane.addProperty(hasNoSpeedLimitProperty, no);
+				}
+			}
+			else
+			{
+				DatatypeProperty hasSpeedLimitProperty = OwlManager.GetDataTypeProperty(model, "hasSpeedLimit");		
+				Literal speedLimit = model.createTypedLiteral(hasSpeedLimit, XSDDatatype.XSDinteger);
+				Statement speedLimitStatement = model.createStatement(lane, hasSpeedLimitProperty, speedLimit);
+				model.add(speedLimitStatement);
+			}
+			
 			//find traffic light
 			Individual light = OwlManager.GetIndividual(model, hasTrafficLight);
 			
@@ -217,7 +223,15 @@ WHERE {
 				ObjectProperty hasTrafficLightProperty = OwlManager.GetObjectProperty(model, "hasTrafficLight");
 				lane.addProperty(hasTrafficLightProperty, light);
 			}
-			
+			else
+			{
+				if(no != null)
+				{
+					ObjectProperty hasNoTrafficLightProperty = OwlManager.GetObjectProperty(model, "hasNoTrafficLight");
+					lane.addProperty(hasNoTrafficLightProperty, no);	
+				}
+			}
+					
 			//find sign
 			Individual sign = OwlManager.GetIndividual(model, hasSign);
 			
@@ -225,6 +239,14 @@ WHERE {
 			{
 				ObjectProperty hasSignProperty = OwlManager.GetObjectProperty(model, "hasSign");
 				lane.addProperty(hasSignProperty, sign);
+			}
+			else
+			{
+				if(no != null)
+				{
+					ObjectProperty hasNoSignProperty = OwlManager.GetObjectProperty(model, "hasNoSign");
+					lane.addProperty(hasNoSignProperty, no);	
+				}
 			}
 		}
 	}
@@ -236,10 +258,12 @@ WHERE {
 		JSONArray arr = inputData.getJSONArray("cars");
 		for (int i = 0; i < arr.length(); i++)
 		{
-		    String id = arr.getJSONObject(i).getString("id");
-		    String hasSpeed = arr.getJSONObject(i).getString("hasSpeed");
-		    String hasAction = arr.getJSONObject(i).getString("hasAction");
-		    String isOnLane = arr.getJSONObject(i).getString("isOnLane");
+			JSONObject object = arr.getJSONObject(i);
+			
+		    String id = getString(object, "id");
+		    String hasSpeed = getString(object, "hasSpeed");
+		    String hasAction = getString(object, "hasAction");
+		    String isOnLane = getString(object, "isOnLane");
 		    
 			Individual car = OwlManager.CreateIndividual(model, carClass, id);
 						
@@ -262,9 +286,38 @@ WHERE {
 		}
 	}
 	
-	private static JSONObject readJSON() throws Exception {
-	    File file = new File(".\\inputs\\input.json");
-	    
+	private static String getString(JSONObject object, String name)
+	{
+		String result = "";
+		try
+		{
+			result = object.getString(name);	
+		}
+		catch(Exception e)
+		{
+			result = "";
+		}
+		
+		return result;
+	}
+	
+	private static JSONObject readJSON(String args[]) throws Exception {
+		
+		String fileName = s_DefaultInput;
+		
+		if(args.length == 1)
+		{
+			fileName = s_StandardInput + args[0];
+		}
+		
+		File file = new File(fileName);
+		
+		if(!file.exists())
+		{
+			fileName = s_DefaultInput;
+			System.out.println("File: " + fileName + " not found. Using default file: " + s_DefaultInput);
+		}
+		
 	    String content = FileUtils.readFileToString(file, "utf-8");
 	    
 	    // Convert JSON string to JSONObject
