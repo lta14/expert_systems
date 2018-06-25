@@ -3,6 +3,9 @@ package expert_systems;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Literal;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.ResIterator;
+import com.hp.hpl.jena.rdf.model.Resource;
 //import com.hp.hpl.jena.rdf.model.ResIterator;
 //import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
@@ -12,11 +15,18 @@ import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 import com.hp.hpl.jena.ontology.DatatypeProperty;
 import com.hp.hpl.jena.ontology.Individual;
 import org.json.*;
+
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.json.JSONObject;
+import org.mindswap.pellet.jena.PelletReasonerFactory;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.apache.commons.io.FileUtils;
 
 public class Main {
@@ -57,54 +67,39 @@ public class Main {
 		boolean createdCrossing = createCrossing(inputData, model);
 		createCars(inputData, model, createdCrossing);
 		
-		//check output
-		String legalSituation = "LegalSingleSituation";
-		String illegalSituation = "IllegalSingleSituation";
-		
-		ArrayList<Individual> legals = new ArrayList<Individual>();
-		ArrayList<Individual> illegals = new ArrayList<Individual>();
-		
-		
-		ExtendedIterator<Individual> iter = model.listIndividuals();
-		while (iter.hasNext()) {
-			Individual individual = iter.next();
-			OntClass ontClass = individual.getOntClass();
-
-			String uri = ontClass.getURI();
-			
-			System.out.println(individual.getLocalName());
-			
-			if(uri.contains(legalSituation))
-			{
-				legals.add(individual);
-				//System.out.println(individual.getLocalName());
-			}
-			else if(uri.contains(illegalSituation))
-			{
-				illegals.add(individual);
-				//System.out.println(individual.getLocalName());
-			}
-		}
-		
-		
+		//reload model to apply swrl rules		
+		model = ModelFactory.createOntologyModel(PelletReasonerFactory.THE_SPEC, model);
+		model.prepare();
 		
 		//Print Report:
 		
-		System.out.println("We have legal situations on the following lanes:" );
+		System.out.println("The current situation is:" );
 		
-		for (Individual individual: legals) {
-		    System.out.println(individual.getLocalName());
+		String legalSituation = "LegalSituation";
+		OntClass legalClass = OwlManager.GetClass(model, legalSituation);
+		
+		boolean isLegal = false;
+		Iterator<?> iterator = legalClass.listInstances();
+		
+		while( iterator.hasNext() ) {
+
+		    isLegal = true;
+		    break;
 		}
 		
-		System.out.println("------------------");
-		System.out.println("We have illegal situations on the following lanes:" );
-		
-		for (Individual individual: illegals) {
-		    System.out.println(individual.getLocalName());
+		if(isLegal)
+		{		 
+			System.out.println("---LEGAL---");
 		}
-		
+		else
+		{
+			System.out.println("---ILLEGAL---");
+		}
 		
 		String fileName = "created.owl";
+		System.out.println("Writing output file: " + fileName);
+
+
 		FileWriter out;
 		try {
 			out = new FileWriter( fileName );
@@ -154,12 +149,12 @@ public class Main {
 			JSONObject object = arr.getJSONObject(i);
 			
 		    String id = getString(object, "id");
-		    String hasType = getString(object, "hasType");
+		    String hasSignType = getString(object, "hasSignType");
 					    
 			Individual sign = OwlManager.CreateIndividual(model, signClass, id);
 			
-			DatatypeProperty hasTypeProperty = OwlManager.GetDataTypeProperty(model, "hasType");
-			sign.addProperty(hasTypeProperty,hasType);
+			DatatypeProperty hasSignTypeProperty = OwlManager.GetDataTypeProperty(model, "hasSignType");
+			sign.addProperty(hasSignTypeProperty,hasSignType);
 		}
 	}
 	
@@ -179,6 +174,11 @@ public class Main {
 			
 			DatatypeProperty hasColorProperty = OwlManager.GetDataTypeProperty(model, "hasColor");
 			light.addProperty(hasColorProperty,hasColor);
+			
+			if(!light.hasProperty(hasColorProperty))
+			{
+				System.out.println("No property");
+			}
 		}
 	}
 	
@@ -208,6 +208,11 @@ public class Main {
 				{
 					ObjectProperty hasNoSpeedLimitProperty = OwlManager.GetObjectProperty(model, "hasNoSpeedLimit");
 					lane.addProperty(hasNoSpeedLimitProperty, no);
+					
+					if(!lane.hasProperty(hasNoSpeedLimitProperty))
+					{
+						System.out.println("No property");
+					}
 				}
 			}
 			else
@@ -216,6 +221,12 @@ public class Main {
 				Literal speedLimit = model.createTypedLiteral(hasSpeedLimit, XSDDatatype.XSDinteger);
 				Statement speedLimitStatement = model.createStatement(lane, hasSpeedLimitProperty, speedLimit);
 				model.add(speedLimitStatement);
+				
+				if(!lane.hasProperty(hasSpeedLimitProperty))
+				{
+					System.out.println("No property");
+				}
+				
 			}
 			
 			//find traffic light
@@ -225,6 +236,11 @@ public class Main {
 			{
 				ObjectProperty hasTrafficLightProperty = OwlManager.GetObjectProperty(model, "hasTrafficLight");
 				lane.addProperty(hasTrafficLightProperty, light);
+				
+				if(!lane.hasProperty(hasTrafficLightProperty))
+				{
+					System.out.println("No property");
+				}
 			}
 			else
 			{
@@ -232,6 +248,11 @@ public class Main {
 				{
 					ObjectProperty hasNoTrafficLightProperty = OwlManager.GetObjectProperty(model, "hasNoTrafficLight");
 					lane.addProperty(hasNoTrafficLightProperty, no);	
+					
+					if(!lane.hasProperty(hasNoTrafficLightProperty))
+					{
+						System.out.println("No property");
+					}
 				}
 			}
 					
@@ -242,6 +263,12 @@ public class Main {
 			{
 				ObjectProperty hasSignProperty = OwlManager.GetObjectProperty(model, "hasSign");
 				lane.addProperty(hasSignProperty, sign);
+				
+				if(!lane.hasProperty(hasSignProperty))
+				{
+					System.out.println("No property");
+				}
+				
 			}
 			else
 			{
@@ -249,6 +276,11 @@ public class Main {
 				{
 					ObjectProperty hasNoSignProperty = OwlManager.GetObjectProperty(model, "hasNoSign");
 					lane.addProperty(hasNoSignProperty, no);	
+					
+					if(!lane.hasProperty(hasNoSignProperty))
+					{
+						System.out.println("No property");
+					}
 				}
 			}
 			
@@ -364,7 +396,7 @@ public class Main {
 				if(no != null)
 				{
 					ObjectProperty isNotAtCrossingProperty = OwlManager.GetObjectProperty(model, "isNotAtCrossing");
-					lane.addProperty(isNotAtCrossingProperty, no);	
+					car.addProperty(isNotAtCrossingProperty, no);	
 				}
 			}
 		}

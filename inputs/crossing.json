@@ -12,11 +12,11 @@
   "signs": [
     {
       "id": "sign1",
-	  "hasType": "stop"
+	  "hasSignType": "stop"
     },
     {
       "id": "sign2",
-	  "hasType": "stop"
+	  "hasSignType": "stop"
     }
   ],
   "cars": [

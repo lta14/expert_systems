@@ -30,10 +30,11 @@ public class OwlManager {
 
 	static OntModel OpenOWL(String fileName) 
 	{
-		OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_RULE_INF);
-		com.hp.hpl.jena.ontology.OntModelSpec spec= PelletReasonerFactory.THE_SPEC;
+		//OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_RULE_INF);
+		OntModel owlModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
+		//com.hp.hpl.jena.ontology.OntModelSpec spec= PelletReasonerFactory.THE_SPEC;
 		
-		OntModel owlModel2 = ModelFactory.createOntologyModel(spec, owlModel);
+		//OntModel owlModel2 = ModelFactory.createOntologyModel(spec, owlModel);
 
 		InputStream in = FileManager.get().open(fileName);
 
@@ -42,7 +43,7 @@ public class OwlManager {
 			throw new IllegalArgumentException("cannot open ontology");
 		}
 
-		OntModel model = (OntModel) owlModel2.read(in, "");
+		OntModel model = (OntModel) owlModel.read(in, "");
 
 		return model;
 	}
