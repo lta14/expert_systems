@@ -10,7 +10,7 @@
   "cars": [
     {
       "id": "car1",
-      "hasSpeed": "80",
+      "hasSpeed": "120",
       "hasAction": "driveForward",
       "isOnLane": "lane1"
     }
@@ -19,7 +19,8 @@
     {
       "id": "lane1",
       "hasSpeedLimit": "100",
-	  "hasTrafficLight": "light1"
+	  "hasTrafficLight": "light1",
+	  "hasSign": "sign1"
     }
   ],
   "crossings": [

@@ -1,11 +1,11 @@
 { 
   "lights": [
-    {
-      "id": "light1",
-      "hasColor": "green",
-    }
   ],
   "signs": [
+    {
+      "id": "sign1",
+	  "hasSignType": "stop"
+    }
   ],
   "cars": [
     {
@@ -19,7 +19,8 @@
     {
       "id": "lane1",
       "hasSpeedLimit": "100",
-	  "hasTrafficLight": "light1"
+	  "hasTrafficLight": "light1",
+	  "hasSign": "sign1"
     }
   ],
   "crossings": [

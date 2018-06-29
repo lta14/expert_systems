@@ -15,7 +15,7 @@
       "id": "car2",
       "hasSpeed": "80",
       "hasAction": "driveForward",
-      "isOnLane": "lineRight",
+      "isOnLane": "laneRight",
     }
   ],  
   "lanes": [

@@ -2,7 +2,7 @@
   "lights": [
     {
       "id": "light1",
-      "hasColor": "green",
+      "hasColor": "red",
     }
   ],
   "signs": [
@@ -19,7 +19,7 @@
     {
       "id": "lane1",
       "hasSpeedLimit": "100",
-	  "hasTrafficLight": "light1"
+	  "hasTrafficLight": "light1",
     }
   ],
   "crossings": [
